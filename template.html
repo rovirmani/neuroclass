@@ -1,0 +1,12 @@
+
+
+<!doctype html>
+<title>Hello from Flask</title>
+{% if filename %}
+  <h1>Image of the cell</h1>
+{% else %}
+  <h1>no image for whatever reason</h1>
+{% endif %}
+
+   <img src={{filename}} alt="Flowers in Chania" width="460" height="345">
+   
