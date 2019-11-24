@@ -2,20 +2,10 @@
 import matplotlib
 matplotlib.use("Agg")
 
-from keras.preprocessing.image import ImageDataGenerator
-from keras.callbacks import LearningRateScheduler
-from keras.optimizers import SGD
-from pyimagesearch.resnet import ResNet
-from pyimagesearch import config
-from sklearn.metrics import classification_report
-from imutils import paths
-import matplotlib.pyplot as plt
-from keras.models import load_model
-import numpy as np
-import argparse
+import keras
 model = ResNet.build(64, 128, 4, 4,
 	(64, 128, 256, 512), reg=0.00010)
-opt = SGD(lr=0.0000000001, momentum=0.9)
+opt = SGD(lr=1e-2, momentum=0.9)
 model.compile(loss="binary_crossentropy", optimizer=opt,
 	metrics=["accuracy"])
 j = model.fit_generator(
