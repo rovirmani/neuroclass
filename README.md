@@ -5,4 +5,4 @@ The model(based off of the famous Resnet) is in this repo. The model used the pu
 
 The file 'classifier.h5' contains the full h5 file of the resnet model including all weights biases, and values. To run the model, simple load the model and apply the predict function onto an image for a probabalistic distribution of whether or not a cell is infected. 
 
-The web app is a cleverly integrated system that uses flask to allow a user to upload an image and have it be classified by the model. 
+The web app is a cleverly integrated system that uses flask to allow a user to upload an image and have it be classified by the model. Flask.py is the general use backend for the flask application, the html is packaged into the app as well. 
