@@ -11,12 +11,8 @@ j = model.fit_generator(#fit gens here )
 dicts = model.predict_generator(#gensteps)
 
 dicts = np.argmax(d, axis=1)
-print(classification_report(testGen.classes, predIdxs,
-	target_names=testGen.class_indices.keys()))
 
 model.save('classifier.h5')
 
-# plot the training loss and accuracy
-N = NUM_EPOCHS
 plt.style.use("ggplot")
 plt.figure()
