@@ -1,15 +1,10 @@
-# USAGE
-# python build_dataset.py
 
-# import the necessary packages
 from pyimagesearch import config
 from imutils import paths
 import random
 import shutil
 import os
 
-# grab the paths to all input images in the original input directory
-# and shuffle them
 imagePaths = list(paths.list_images(config.ORIG_INPUT_DATASET))
 random.seed(42)
 random.shuffle(imagePaths)
@@ -19,7 +14,7 @@ i = int(len(imagePaths) * config.TRAIN_SPLIT)
 trainPaths = imagePaths[:i]
 testPaths = imagePaths[i:]
 
-# we'll be using part of the training data for validation
+
 i = int(len(trainPaths) * config.VAL_SPLIT)
 valPaths = trainPaths[:i]
 trainPaths = trainPaths[i:]
