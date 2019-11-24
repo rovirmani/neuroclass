@@ -11,6 +11,9 @@ import matplotlib.pyplot as plt
 from keras.models import load_model
 import numpy as np
 import argparse
+
+
+
 trainAug = ImageDataGenerator(
 	rescale=1 / 255.0,
 	rotation_range=20,
@@ -22,7 +25,6 @@ trainAug = ImageDataGenerator(
 	fill_mode="nearest")
 
 valAug = ImageDataGenerator(rescale=1 / 255.0)
-# initialize the validation (and testing) data augmentation object
 valAug = ImageDataGenerator(rescale=1 / 255.0)
 testGen = valAug.flow_from_directory(
 	config.TEST_PATH,
@@ -39,7 +41,7 @@ model.compile(loss="binary_crossentropy", optimizer=opt,
 
 totalTest = len(list(paths.list_images(config.TEST_PATH)))
 print(totalTest)
-predIdxs = model.predict_generator(testGen,
+pred = model.predict_generator(testGen,
 	steps=(totalTest) + 1)
 
-print(predIdxs)
+print(pred)
