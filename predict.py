@@ -1,17 +1,5 @@
-from keras.models import load_model
+import keras
 import cv2
-from keras.preprocessing.image import ImageDataGenerator
-from keras.callbacks import LearningRateScheduler
-from keras.optimizers import SGD
-from pyimagesearch.resnet import ResNet
-from pyimagesearch import config
-from sklearn.metrics import classification_report
-from imutils import paths
-import matplotlib.pyplot as plt
-from keras.models import load_model
-import numpy as np
-import argparse
-
 
 
 trainAug = ImageDataGenerator(
