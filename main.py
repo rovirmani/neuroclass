@@ -14,7 +14,7 @@ import cv2
 
 from werkzeug import secure_filename
 
-UPLOAD_FOLDER = '/Users/madhavrai/Desktop/malaria/uploads'
+UPLOAD_FOLDER = 'malaria/testing/x'
 ALLOWED_EXTENSIONS = set([ 'png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
