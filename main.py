@@ -45,7 +45,7 @@ def upload_file():
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Plagiarism Defender</a>
+            <a class="navbar-brand" href="#">malr</a>
         </div>
       </div>
     </nav>
