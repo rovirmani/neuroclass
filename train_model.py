@@ -13,6 +13,5 @@ dicts = model.predict_generator(#gensteps)
 dicts = np.argmax(d, axis=1)
 
 model.save('classifier.h5')
-
 plt.style.use("ggplot")
 plt.figure()
