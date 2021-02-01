@@ -29,6 +29,7 @@ def upload_file():
     </form>
     '''
 
+
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     filename = 'http://127.0.0.1:5000/uploads/' + filename
