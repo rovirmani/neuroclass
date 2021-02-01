@@ -64,7 +64,6 @@ background: linear-gradient(90deg, rgba(255,217,0,1) 33%, rgba(255,0,108,1) 90%)
     </body>
     '''
 
-
 @app.route('/show/<filename>')
 def uploaded_file(filename):
     folder = 'malaria/testing/x'
